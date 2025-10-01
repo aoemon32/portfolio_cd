@@ -43,47 +43,68 @@ padding: 80px 60px;
     color: #ebeae9;
 }
 
-/* おしごと */
-
-#works {
-    padding:80px 4.8%;
+/* Works詳細 */
+.works_wrapper {
+    padding:4.8%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.banner {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap:60px;
-    padding: 50px 40px;
+.works_topimage {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
-.banner_text {
-    width:50%;
-}
-
-.banner_text h3 {
-    font-size: 30px;
+.hp_works_title {
+    font-size: 60px;
     font-weight: bold;
-    padding-top: 30px;
+    display: inline-block;
     border-bottom: 2px solid #002447;
-    padding-bottom: 8px;
-
+    padding-bottom: 10px;
+    margin:7% 0px;
 }
 
-.banner_comment {
-    padding-top: 30px;
+.hp_works_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hp_works_movie {
+    width:55%
+}
+
+.hp_works_word {
+    width:40%;
+    font-size :18px;
+}
+
+.hp_works__q {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.hp_works__a {
+    padding-bottom: 20px;
+    line-height: 1.8em;
+}
+
+.works_column {
+    display: flex;
+    justify-content: space-between;
     font-size: 18px;
-    line-height: 1.5em;
+    padding-bottom: 20px;
 }
 
-.banner_image {
-    width: 50%;
-    max-width: 521px;
+.works_topic {
+    width:25%;
+    font-weight: bold;
 }
 
-.banner_image img {
-    width: 520px;   /* 親要素の幅いっぱいに表示 */
-    height: auto;
+.works_text {
+    width:65%;
+    line-height: 1.8em;
 }
 
 /* 波 */

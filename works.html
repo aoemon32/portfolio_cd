@@ -4,8 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/works.css">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'xdf6izq',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/works.css">
     <title>おしごと</title>
 </head>
 
@@ -14,10 +24,10 @@
         <div class="header_container">
             <nav class="header_nav">
                 <ul>
-                    <li><a href="#about-me">わたしのこと</a></li>
-                    <li><a href="#works">おしごと</a></li>
+                    <li><a href="./about-me.html">わたしのこと</a></li>
+                    <li><a href="./index.html#works">おしごと</a></li>
                     <li><a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。"><img
-                                src="../images/header-contact-btn.png" alt="ヘッダー問合せボタン" /></a></li>
+                                src="./images/header-contact-btn.png" alt="ヘッダー問合せボタン" /></a></li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +53,7 @@
                     </p>
                 </div>
                 <div class="banner_image">
-                    <img src="../images/icecream_banner.jpg" alt="バナー画像">
+                    <img src="./images/icecream_banner.jpg" alt="バナー画像">
                 </div>
             </div>
             <div class="banner">
@@ -59,7 +69,7 @@
                     </p>
                 </div>
                 <div class="banner_image">
-                    <img src="../images/springsale_banner.jpg" alt="バナー画像">
+                    <img src="./images/springsale_banner.jpg" alt="バナー画像">
                 </div>
             </div>
             <div class="banner">
@@ -74,7 +84,7 @@
                     </p>
                 </div>
                 <div class="banner_image">
-                    <img src="../images/humberger_banner_pop.jpg" alt="バナー画像">
+                    <img src="./images/humberger_banner_pop.jpg" alt="バナー画像">
                 </div>
             </div>
             <div class="banner">
@@ -89,7 +99,7 @@
                     </p>
                 </div>
                 <div class="banner_image">
-                    <img src="../images/humberger_banner_premium.jpg" alt="バナー画像">
+                    <img src="./images/humberger_banner_premium.jpg" alt="バナー画像">
                 </div>
             </div>
         </div>
@@ -105,28 +115,23 @@
         </svg>
     </div>
     <!-- フッター -->
+    <!-- フッター -->
     <footer>
         <div class="site_footer_wrapper">
-            <div class="site_footer_logo">
-                <img src="../images/logo.png" alt="umiro designロゴ" />
+            <div class="footer_contact">
+                <p class="footer_contact_text">お仕事のご相談はこちらから</p>
             </div>
-            <nav class="site_footer_nav">
-                <ul>
-                    <li><a href="#about-me">わたしのこと</a></li>
-                    <li>
-                        <p>/</p>
-                    </li>
-                    <li><a href="#works">おしごと</a></li>
-                    <li>
-                        <p>/</p>
-                    </li>
-                    <li><a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。">といあわせ</a></li>
-                </ul>
-            </nav>
+            <div class="footer_contact_btn">
+                <a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。"><img
+                        src="./images/header-contact-btn.png" alt="ヘッダー問合せボタン" /></a>
+            </div>
+            <div class="site_footer_logo">
+                <a href="./index.html#main_view">
+                    <img src="./images/logo.png" alt="umiro designロゴ" />
+                </a>
+            </div>
         </div>
     </footer>
-
-    <div class="contact_button"><a href=”#contact”><img src="../images/mail_icon.png" alt="問い合わせに遷移するボタン" /></a></div>
 </body>
 
 

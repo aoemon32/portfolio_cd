@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'xdf6izq',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
     <title>Umiro Design</title>
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/top.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
 </head>
 
 <body>
@@ -14,10 +24,10 @@
         <div class="header_container">
             <nav class="header_nav">
                 <ul>
-                    <li><a href="#about-me">わたしのこと</a></li>
-                    <li><a href="#works">おしごと</a></li>
+                    <li><a href="./index.html#about-me">わたしのこと</a></li>
+                    <li><a href="./index.html#works">おしごと</a></li>
                     <li><a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。"><img
-                                src="../images/header-contact-btn.png" alt="ヘッダー問合せボタン" /></a></li>
+                                src="./images/header-contact-btn.png" alt="ヘッダー問合せボタン" /></a></li>
                 </ul>
             </nav>
         </div>
@@ -26,11 +36,11 @@
     <section id="main_view">
         <div class="mainvisual">
             <picture>
-                <source srcset="../images/top-img.png" alt="ファーストビュー" />
-                <img src="../images/contact_tori.jpg" alt="地平線" />
+                <source srcset="./images/top-img.png" alt="ファーストビュー" />
+                <img src="./images/contact_tori.jpg" alt="地平線" />
             </picture>
             <div class="first_view_logo">
-                <img src="../images/logo.png" />
+                <img src="./images/logo.png" />
             </div>
             <div class="first_view_word">
                 <h2>包容力と、<br>無限の色を。</h2>
@@ -47,7 +57,7 @@
             <p>固定された形ではなく、可能性の広がりと調和を大切にし、唯一無二の世界観を創り上げます。</p>
         </div>
         <div class="concept_image">
-            <img src="../images/aboutme-tori.png" alt="青い鳥のイメージ" />
+            <img src="./images/aboutme-tori.png" alt="青い鳥のイメージ" />
         </div>
         <div class="wave_wrapper_top">
             <svg class="wave_top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -59,19 +69,19 @@
     </section>
 
     <!-- about me -->
-    <section id="aboutme">
+    <section id="about-me">
         <div class="aboutme_wrapper">
             <div class="aboutme_title">
                 <h2 class="aboutme_title_word">わたしのこと</h2>
             </div>
             <div class="aboutme_main">
-                <img src="../images/top_profilephoto.png" alt="プロフィール画像" />
+                <img src="./images/top_profilephoto.png" alt="プロフィール画像" />
                 <p class="aboutme_word">umiro design（ウミイロ デザイン）は、ウェブデザインを中心に、グラフィックやブランディングを通じて、
                     “包容力と無限の色”をテーマにした表現をお届けします。<br><br>デザインは単なる見た目だけでなく、想いを伝えるための大切な器。<br>わたしのちょっとしたサポートが、お客様の世界観をより豊かにし、見る人の心を動かすきっかけになればと思っています。<br>ご依頼いただくお客様、そしてその先にいるお客様やユーザーへ。<br>umiro
                     design の色と包容力が届き、つながりを生み出すことを願って。</p>
             </div>
             <div class="profile_btn">
-                <a href=""><img src="../images/profile-btn.png" alt="プロフィールボタン" /></a>
+                <a href="./about-me.html"><img src="./images/profile-btn.png" alt="プロフィールボタン" /></a>
             </div>
         </div>
     </section>
@@ -88,72 +98,87 @@
         <div class="works_wrapper">
             <div class="works_title_wrapper">
                 <h2 class="works_title">おしごと</h2>
-                <img src="../images/works-tori.png" />
+                <img src="./images/works-tori.png" />
             </div>
             <h3 class="works_subtitle">Webデザイン / コーディング</h3>
             <div class="works_gallery">
                 <div class="lp_works_scroll">
                     <div class="lp_movieblock">
                         <video autoplay muted loop width=" 100%" height="auto">
-                            <source src="../movies/designcafe_movie.mov" type="video/mp4">
+                            <source src="./movies/designcafe_movie.mov" type="video/mp4">
                         </video>
                     </div>
                     <div class="lp_imageblock">
-                        <a href="">
+                        <a href="./works/works_designcafe..html">
                             <p>◀︎Design Cafe HP</p>
                         </a>
-                        <a href=""><img src="../images/designcafe_moc.png" alt="モックアップ1" /></a>
+                        <a href="./works/works_designcafe..html"><img src="./images/designcafe_moc.png"
+                                alt="モックアップ1" /></a>
                     </div>
                 </div>
                 <div class="lp_works_scroll">
                     <div class="lp_imageblock">
-                        <a href="">
+                        <a href="./works/works_workers.html">
                             <p>Workers LP Design▶︎</p>
                         </a>
-                        <a href=""><img src="../images/workers_moc.png" alt="モックアップ2" /></a>
+                        <a href="./works/works_workers.html"><img src="./images/workers_moc.png" alt="モックアップ2" /></a>
 
                     </div>
                     <div class="lp_movieblock">
                         <video autoplay muted loop width=" 100%" height="auto">
-                            <source src="../movies/workers_LP_movie.mov" type="video/mp4">
+                            <source src="./movies/workers_LP_movie.mov" type="video/mp4">
                         </video>
                     </div>
                 </div>
+                <div class="lp_works_scroll">
+                    <div class="lp_movieblock">
+                        <video autoplay muted loop width=" 100%" height="auto">
+                            <source src="./movies/designcafe_movie.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="lp_imageblock">
+                        <a href="./works/works_designcafe..html">
+                            <p>◀︎Hair Salon HP</p>
+                        </a>
+                        <a href="./works/works_hairsalon.html"><img src="./images/designcafe_moc.png"
+                                alt="モックアップ1" /></a>
+                    </div>
+                </div>
                 <div class="works_img">
-                    <img src="../images/works-tori.png" alt="鳥のイメージ2" />
+                    <img src="./images/works-tori.png" alt="鳥のイメージ2" />
                 </div>
                 <h3 class="works_subtitle">バナーデザイン</h3>
                 <div class="banner_works_scroll">
                     <div class="banner_imageblock">
-                        <a href=""><img src="../images/icecream_banner.jpg" alt="モックアップ3" /></a>
-                        <a href="">
+                        <a href="./works.html"><img src="./images/icecream_banner.jpg" alt="モックアップ3" /></a>
+                        <a href="./works.html">
                             <p>期間限定アイスクリームの<br>SNS広告バナー制作</p>
                         </a>
                     </div>
                     <div class="banner_imageblock">
-                        <a href=""><img src="../images/humberger_banner_premium.jpg" alt="モックアップ4" /></a>
-                        <a href="">
+                        <a href="./works.html"><img src="./images/humberger_banner_premium.jpg" alt="モックアップ4" /></a>
+                        <a href="./works.html">
                             <p>新登場デラックスバーガー<br>宣伝バナー制作</p>
                         </a>
                     </div>
                     <div class="banner_imageblock">
-                        <a href=""><img src="../images/humberger_banner_pop.jpg" alt="モックアップ5" /></a>
-                        <a href="">
+                        <a href="./works.html"><img src="./images/humberger_banner_pop.jpg" alt="モックアップ5" /></a>
+                        <a href="./works.html">
                             <p>新登場デラックスバーガー<br>宣伝バナー制</p>
                         </a>
                     </div>
                     <div class="banner_imageblock">
-                        <a href=""><img src="../images/springsale_banner.jpg" alt="モックアップ6" /></a>
-                        <a href="">
+                        <a href="./works.html"><img src="./images/springsale_banner.jpg" alt="モックアップ6" /></a>
+                        <a href="./works.html">
                             <p>携帯電話学割プラン<br>広告バナー制作</p>
                         </a>
                     </div>
                 </div>
                 <div class="bannerworks_btn">
-                    <a href=""><img src="../images/banner-works-btn.png" alt="バナー制作実績ボタン" /></a>
+                    <a href="./works.html"><img src="./images/banner-works-btn.png" alt="バナー制作実績ボタン" /></a>
                 </div>
                 <div class="works_bottom">
-                    <img src="../images/works-tori-under.png" />
+                    <img src="./images/works-tori-under.png" />
                 </div>
             </div>
         </div>
@@ -175,7 +200,7 @@
             </div>
             <div class="contact_btn">
                 <a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。"><img
-                        src="../images/footer-contact-btn.png" alt="問い合わせアイコン" /></a>
+                        src="./images/footer-contact-btn.png" alt="問い合わせアイコン" /></a>
             </div>
         </div>
     </section>
@@ -189,15 +214,18 @@
     <footer>
         <div class="global_footer_wrapper">
             <div class="global_footer_logo">
-                <img src="../images/logo.png" alt="umiro designロゴ" />
+                <img src="./images/logo.png" alt="umiro designロゴ" />
             </div>
             <nav class="global_footer_nav">
                 <ul>
-                    <li><a href="#about-me">わたしのこと</a></li>
+                    <li><a href="./index.html#main_view">トップ</a></li>
+                    <li>
+                        <p>/</p>
+                    <li><a href="./about-me.html">わたしのこと</a></li>
                     <li>
                         <p>/</p>
                     </li>
-                    <li><a href="#works">おしごと</a></li>
+                    <li><a href="./index.html#works">おしごと</a></li>
                     <li>
                         <p>/</p>
                     </li>
