@@ -19,7 +19,7 @@ div {
     padding: 0;
     line-height: 1;
     color: #1a3155;
-    font-family: 'TsukuARdGothic-Regular','メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',YuGothic,'Yu Gothic',sans-serif;
+    font-family:  "TsukuARdGothic-Regular","fot-tsukuardgothic-std","メイリオ", Meiryo,"ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN",YuGothic,"Yu Gothic",sans-serif;
     box-sizing: border-box;
 }
 

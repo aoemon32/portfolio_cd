@@ -155,25 +155,32 @@ color: #002447;
 
 .aboutme_main img {
     width:40%;
+    flex-shrink: 0;
 }
 
 .aboutme_word {
-    width :40%;
+    width :50%;
     line-height: 2em;
+}
+
+.aboutme_main > div {
+    display: flex;
+    flex-direction: column;
 }
 
 .profile_btn {
     text-align: right;
     padding:30px;
-    font-size: 20px;
 }
 
 .profile_btn a {
   padding-right: 36px;
     display: inline-block;   
   position: relative; 
-  font-weight: bold;
-  font-family: Andale Mono;
+}
+
+.profile_btn a img {
+    width:200px;
 }
 
 .wave_wrapper_bottom { 
@@ -293,6 +300,7 @@ color: #002447;
     padding-bottom: 30px;
 }
 
+/* slickにしたらbaselineにならなくなってしまった */
 
 .banner_works_scroll {
      display: flex;
@@ -350,7 +358,7 @@ color: #002447;
 }
 
 .bannerworks_btn img {
-    width:290px;
+    width:200px;
 }
 
 .works_bottom {
@@ -436,5 +444,177 @@ color: #002447;
     line-height: 2em;
     padding-left: 5%;
 }
+}
+
+@media screen and (max-width:767px) {
+/* ファーストビュー */
+
+    .first_view_word h2 {
+        color: #fefefd;
+        text-shadow:2px 2px 4px rgba(0,0,0,0.4);;
+    }
+
+
+    /* コンセプト */
+.concept_word {
+    align-items: center;
+}
+
+.concept_word p {
+    width: 100%;
+}
+
+.concept_image img {
+    width:200px;
+}
+
+/* about-me */
+    .aboutme_wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+     .aboutme_main {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .aboutme_main img {
+        order: -1; /* 画像を一番上に */
+        margin-bottom: 20px;
+        padding:10px;
+        width:180px;
+    }
+    
+    .aboutme_title {
+        float: left;
+        padding:0;
+        padding-right: 10px;
+    }
+    
+    .aboutme_title h2 {
+        font-size:50px;
+        padding:20px;
+        writing-mode: vertical-rl;
+        width:100%;
+
+    }
+    
+    .aboutme_main img {
+        float: right;
+        width:80%;
+    }
+    
+    .aboutme_word {
+        clear: both;
+        width: 100%;
+        font-size:14px;
+        padding:0;
+    }
+
+    .profile_btn {
+    display: block;
+    margin: 0 auto;
+    width:80%;
+}
+
+    .profile_btn a img {
+    width:175px;
+    }
+
+    /* works */
+
+    .works_title_wrapper {
+        gap:20px;
+    }
+    .works_title_wrapper h2 {
+        font-size: 50px;
+        writing-mode: vertical-lr;
+        padding-bottom:40px;
+    }
+
+    .works_subtitle {
+        text-align: end;
+        padding: 0;
+    }
+
+    .lp_works_scroll {
+        padding:50px 0;
+    }
+
+    .works_img img {
+        width:200px;
+    }
+
+    .banner_works_scroll {
+        padding:50px 0;
+    }
+
+    /* ここで、画像の高さを揃えて、幅を自動調節にしているが、その画像を中央寄せにできない */
+
+    .banner_imageblock a img {
+        height:280px;
+        width:auto;
+    }
+
+    .bannerworks_btn a img {
+        width:175px;
+    }
+
+    .works_bottom img {
+        width:200px;
+    }
+
+    /* contact */
+
+    .contact_wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
+
+    .contact_title {
+        font-size:50px;
+        padding:0;
+        padding-right: 20px;
+        writing-mode: vertical-rl;
+        width:30%;
+    }
+    .contact_word {
+        width:100%;
+        text-align: left;
+        padding-bottom:0;
+        padding-top:50px;
+    }
+
+    .contact_btn a img {
+        width:175px;
+    }
+
+/* footer */
+
+    .global_footer_wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding:50px 20px;
+    }
+
+    .global_footer_logo {
+        width:30%
+    }
+
+    .global_footer_nav ul {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        font-size: 14px;
+    }
+
+    .global_footer_nav ul li p {
+        display: none;
+    }
+
+
 }
 

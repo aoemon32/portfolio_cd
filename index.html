@@ -17,6 +17,13 @@
     <title>Umiro Design</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 
 <body>
@@ -77,12 +84,13 @@
             <div class="aboutme_main">
                 <img src="./images/top_profilephoto.png" alt="プロフィール画像" />
                 <p class="aboutme_word">umiro design（ウミイロ デザイン）は、ウェブデザインを中心に、グラフィックやブランディングを通じて、
-                    “包容力と無限の色”をテーマにした表現をお届けします。<br><br>デザインは単なる見た目だけでなく、想いを伝えるための大切な器。<br>わたしのちょっとしたサポートが、お客様の世界観をより豊かにし、見る人の心を動かすきっかけになればと思っています。<br>ご依頼いただくお客様、そしてその先にいるお客様やユーザーへ。<br>umiro
-                    design の色と包容力が届き、つながりを生み出すことを願って。</p>
+                    “包容力と無限の色”をテーマにした表現をお届けします。<br><br>デザインは単なる見た目だけでなく、想いを伝えるための大切な器。<br>わたしのちょっとしたサポートが、お客様の世界観をより豊かにし、見る人の心を動かすきっかけになればと思っています。<br>ご依頼いただくお客様、そしてその先にいるお客様やユーザーへ。<br>umirodesign
+                    の色と包容力が届き、つながりを生み出すことを願って。</p>
             </div>
-            <div class="profile_btn">
-                <a href="./about-me.html"><img src="./images/profile-btn.png" alt="プロフィールボタン" /></a>
-            </div>
+        </div>
+        <div class="profile_btn">
+            <a href="./about-me.html"><img src="./images/profile-btn.png" alt="プロフィールボタン" /></a>
+        </div>
         </div>
     </section>
     <!-- 波 -->
@@ -196,13 +204,14 @@
         <div class="contact_wrapper">
             <h2 class="contact_title">といあわせ</h2>
             <div class="contact_under">
-                <p class="contact_word">デザインや、ウェブサイト制作の依頼だけでなく、<br>会計や、データ処理などのご依頼も受け付けます。</p>
-            </div>
-            <div class="contact_btn">
-                <a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。"><img
-                        src="./images/footer-contact-btn.png" alt="問い合わせアイコン" /></a>
+                <p class="contact_word">デザインや、ウェブサイト制作の依頼だけでなく、<br>会計や、データ処理などのご依頼も受け付けます。<br>ぜひお問合せください。</p>
             </div>
         </div>
+        <div class="contact_btn">
+            <a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。"><img
+                    src="./images/footer-contact-btn.png" alt="問い合わせアイコン" /></a>
+        </div>
+
     </section>
     <div class="wave_wrapper_bottom">
         <svg class="wave_bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -234,6 +243,28 @@
             </nav>
         </div>
     </footer>
+    <script>
+        $(document).ready(function () {
+            $('.banner_works_scroll').slick({
+                infinite: true,        // 無限ループ
+                slidesToShow: 3,       // 一度に表示する数
+                slidesToScroll: 1,     // スクロールする数
+                autoplay: true,        // 自動再生
+                autoplaySpeed: 3000,   // 自動再生速度（ミリ秒）
+                dots: true,            // ドット表示
+                arrows: true,          // 矢印表示
+                responsive: [
+                    {
+                        breakpoint: 768,  // スマホサイズ
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>
