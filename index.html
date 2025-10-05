@@ -29,6 +29,9 @@
 <body>
     <header>
         <div class="header_container">
+            <div class="hamburger">
+                <span></span>
+            </div>
             <nav class="header_nav">
                 <ul>
                     <li><a href="./index.html#about-me">わたしのこと</a></li>
@@ -36,6 +39,14 @@
                     <li><a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。"><img
                                 src="./images/header-contact-btn.png" alt="ヘッダー問合せボタン" /></a></li>
                 </ul>
+            </nav>
+            <nav class="header_nav_sp">
+                <ul>
+                    <li><a href="./index.html#about-me">わたしのこと</a></li>
+                    <li><a href="./index.html#works">おしごと</a></li>
+                    <li><a href="mailto:aki.n218@gmail.com?subject=お問い合わせ&body=こちらにメッセージをご記入ください。">といあわせ</a></li>
+                </ul>
+                <img src="./images/nav_sp_tori.png" alt="ロゴの鳥" />
             </nav>
         </div>
     </header>
@@ -47,7 +58,7 @@
                 <img src="./images/contact_tori.jpg" alt="地平線" />
             </picture>
             <div class="first_view_logo">
-                <img src="./images/logo.png" />
+                <a href=./index.html#main_view"><img src="./images/logo.png" alt="ロゴ" /></a>
             </div>
             <div class="first_view_word">
                 <h2>包容力と、<br>無限の色を。</h2>
@@ -223,7 +234,7 @@
     <footer>
         <div class="global_footer_wrapper">
             <div class="global_footer_logo">
-                <img src="./images/logo.png" alt="umiro designロゴ" />
+                <a href="./index.html#main_view"><img src="./images/logo.png" alt="ロゴ" /></a>
             </div>
             <nav class="global_footer_nav">
                 <ul>
@@ -243,7 +254,17 @@
             </nav>
         </div>
     </footer>
+
     <script>
+        // ハンバーガー
+        const hamburger = document.querySelector('.hamburger');
+        const navSp = document.querySelector('.header_nav_sp');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navSp.classList.toggle('active');
+        });
+
         $(document).ready(function () {
             $('.banner_works_scroll').slick({
                 infinite: true,        // 無限ループ

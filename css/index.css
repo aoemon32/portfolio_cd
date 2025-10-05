@@ -28,7 +28,14 @@ font-size: 16px;
 color: #002447;
 }
 
+/* ハンバーガーボタン */
+.hamburger,
+.header_nav_sp {
+  display: none;
+}
 
+
+/* キービジュアル */
 .mainvisual {
     position:relative;
     width: 100%;
@@ -45,7 +52,7 @@ color: #002447;
     position: absolute; 
     top: 40px;                    
     left: 40px;                   
-    width: 208px;        
+    width: 180px;        
 }
 
 .first_view_word h2 {
@@ -434,6 +441,11 @@ color: #002447;
 
 @media screen and (max-width:1150px) {
 
+/* header */
+.header_nav ul {
+    gap:40px;
+}
+
     /* about-me */
 .aboutme_main img {
     width:50%;
@@ -447,6 +459,131 @@ color: #002447;
 }
 
 @media screen and (max-width:767px) {
+.hamburger {
+    display:block;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    margin-left: auto;
+}
+
+/* 真ん中の線 */
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #fefefd;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    right:0;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+}
+
+/* 上の線（疑似要素） */
+.hamburger span::before {
+    content: '';
+    display: block;
+    width: 75%;
+    height: 3px;
+    background-color: #fefefd;
+    border-radius: 2px;
+    position: absolute;
+    top: -14px;
+    right:0;
+    transition: all 0.3s;
+}
+
+/* 下の線（疑似要素） */
+.hamburger span::after {
+    content: '';
+    display: block;
+    width: 65%;
+    height: 3px;
+    background-color: #fefefd;
+    border-radius: 2px;
+    position: absolute;
+    top: 14px;
+    right:0;
+    transition: all 0.3s;
+}
+
+/* メニューが開いた時（×印に変形） */
+.hamburger.active span {
+    background-color: transparent; /* 真ん中の線を透明に */
+}
+
+.hamburger.active span::before {
+    top: 0;
+    width:100%;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span::after {
+    top: 0;
+    width:100%;
+    transform: rotate(-45deg);
+}
+
+.header_nav {
+        display: none; /* PC用メニューを非表示 */
+    }
+    
+.header_nav_sp {
+    position:absolute;
+    height:100vh;
+    width: 100%;
+    height: 100vh;
+    background-color:#002447;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    font-display: flex;
+    flex-direction: column;
+}
+
+.header_nav_sp img {
+    width:38%;
+    position: absolute;
+    top:540px;
+    left:30%;
+}
+
+.header_nav_sp.active {
+    display: block; /* ← これを追加！ */
+}
+    
+    .header_nav_sp a {
+         color:#fff;
+         font-size: 20px;
+    }
+
+     .header_nav_sp ul {
+        display: flex;
+       justify-content: space-between;
+        height:100%;
+        justify-content: center;
+        align-items: center;
+        gap:10%;
+    }
+    
+    .header_nav_sp ul li {
+        margin: 40px 0;
+  
+    }
+    
+    .header_nav_sp ul li a {
+        color: #fefefd;
+        text-decoration: none;
+        writing-mode: vertical-lr;
+        font-size: 22px;
+    }
+} 
+
 /* ファーストビュー */
 
     .first_view_word h2 {
@@ -454,19 +591,19 @@ color: #002447;
         text-shadow:2px 2px 4px rgba(0,0,0,0.4);;
     }
 
-
     /* コンセプト */
-.concept_word {
+    .concept_word {
     align-items: center;
-}
+    }
 
-.concept_word p {
+    .concept_word p {
     width: 100%;
-}
+    font-size: 16px;  
+    }
 
-.concept_image img {
+    .concept_image img {
     width:200px;
-}
+    }
 
 /* about-me */
     .aboutme_wrapper {
@@ -586,6 +723,7 @@ color: #002447;
         text-align: left;
         padding-bottom:0;
         padding-top:50px;
+        font-size: 16px;
     }
 
     .contact_btn a img {
@@ -616,5 +754,5 @@ color: #002447;
     }
 
 
-}
+
 
