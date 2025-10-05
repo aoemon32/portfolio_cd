@@ -35,34 +35,207 @@ color: #002447;
 }
 
 
-/* キービジュアル */
+/* mainvisualの設定 */
 .mainvisual {
-    position:relative;
+    position: relative;
     width: 100%;
-    height: 769px;
-    object-fit: cover;
+    height: 100vh;
+    min-height: 780px;
+   overflow: visible;
 }
 
-.mainvisual img {
+/* 波のコンテナ */
+.first_view_wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: linear-gradient(to bottom, #b8d4e0 0%, #a8c9d8 100%);
 }
 
+/* 波の設定 */
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.wave-back {
+    z-index: 1;
+}
+
+.wave-middle {
+    z-index: 2;
+}
+
+.wave-front {
+    z-index: 3;
+}
+
+.wave svg {
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    width: 110%;
+    height: 100%;
+}
+
+.wave-back svg {
+    animation: wave-animation 15s ease-in-out infinite;
+}
+
+.wave-middle svg {
+    animation: wave-animation 12s ease-in-out infinite reverse;
+}
+
+.wave-front svg {
+    animation: wave-animation 10s ease-in-out infinite;
+}
+
+@keyframes wave-animation {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(-2%) translateY(-10px);
+    }
+    50% {
+        transform: translateX(0) translateY(-5px);
+    }
+    75% {
+        transform: translateX(2%) translateY(-10px);
+    }
+}
+
+/* 4つ目の波（下向き） */
+.wave-bottom-container {
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+
+.wave-bottom-container svg {
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    width: 110%;
+    height: 100%;
+    animation: wave-animation-reverse 18s ease-in-out infinite;
+}
+
+@keyframes wave-animation-reverse {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(2%) translateY(-10px);
+    }
+    50% {
+        transform: translateX(0) translateY(-5px);
+    }
+    75% {
+        transform: translateX(-2%) translateY(-10px);
+    }
+}
+
+/* ロゴ */
 .first_view_logo {
-    position: absolute; 
-    top: 40px;                    
-    left: 40px;                   
-    width: 180px;        
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+.first_view_logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* テキスト */
+.first_view_word {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 .first_view_word h2 {
-    position:absolute;
-    top: 45%;
-    left: 10%;
-    color: #002447;
-    font-size: 50px;
+    font-size: 52px;
+    font-weight: 300;
+    color: #1a3a52;
     writing-mode: vertical-rl;
-    line-height: 1.5em;
+    letter-spacing: 8px;
+    line-height: 1.5;
+}
+
+/* ロゴ */
+.first_view_logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+.first_view_logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* テキスト */
+.first_view_word {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.first_view_word h2 {
+    font-size: 52px;
+    font-weight: 300;
+    color: #1a3a52;
+    writing-mode: vertical-rl;
+    letter-spacing: 8px;
+    line-height: 1.5;
+}
+
+
+/* ロゴ */
+.first_view_logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+.first_view_logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* テキスト */
+.first_view_word {
+    position: absolute;
+    left: 10%;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.first_view_word h2 {
+    font-size: 52px;
+    font-weight: bold;
+    color: #1a3a52;
+    writing-mode: vertical-rl;
+    letter-spacing: 8px;
+    line-height: 1.5;
 }
 
 /* メイン下 */
@@ -134,7 +307,7 @@ color: #002447;
 }
 
 .aboutme_wrapper {
-        max-width: 1200px;
+    max-width: 1200px;
     margin:0 auto;
 }
 
@@ -582,7 +755,6 @@ color: #002447;
         writing-mode: vertical-lr;
         font-size: 22px;
     }
-} 
 
 /* ファーストビュー */
 
@@ -753,6 +925,6 @@ color: #002447;
         display: none;
     }
 
-
+} 
 
 

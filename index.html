@@ -53,10 +53,31 @@
     <!-- メインビジュアル -->
     <section id="main_view">
         <div class="mainvisual">
-            <picture>
-                <source srcset="./images/top-img.png" alt="ファーストビュー" />
-                <img src="./images/contact_tori.jpg" alt="地平線" />
-            </picture>
+            <div class="first_view_wave">
+                <div class="wave wave-back">
+                    <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+                        <path d="M0,400 Q360,560 720,400 T1440,400 L1440,800 L0,800 Z" fill="#002447" opacity="0.9" />
+                    </svg>
+                </div>
+
+                <div class="wave wave-middle">
+                    <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+                        <path d="M0,500 Q360,350 720,500 T1440,450 L1440,800 L0,800 Z" fill="#fefefd" opacity="0.7" />
+                    </svg>
+                </div>
+
+                <div class="wave wave-front">
+                    <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+                        <path d="M0,550 Q360,450 720,550 T1440,600 L1440,800 L0,800 Z" fill="#8fb0c3" opacity="0.9" />
+                    </svg>
+                </div>
+            </div>
+            <div class="wave-bottom-container">
+                <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                    <path d="M0,75 Q360,20 720,75 T1440,80 L1440,0 L0,0 Z" fill="#8fb0c3" />
+                </svg>
+            </div>
+
             <div class="first_view_logo">
                 <a href=./index.html#main_view"><img src="./images/logo.png" alt="ロゴ" /></a>
             </div>
