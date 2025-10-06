@@ -174,11 +174,11 @@ padding: 80px 60px;
     }
 
     .banner_text h3 {
-        font-size: 22px;
+        font-size: 19px;
     }
 
     .banner_comment {
-        font-size: 16px;
+        font-size: 15px;
         padding-top: 0;
         padding-bottom: 15px;
     }
@@ -312,7 +312,7 @@ padding: 80px 60px;
         writing-mode: vertical-lr;
         font-size: 22px;
     }
-}
+
 
     .works_title_wrapper {
         padding:100px 20px 40px 20px;
@@ -342,6 +342,7 @@ padding: 80px 60px;
 
     .banner_comment {
         font-size: 16px;
+        padding: 20px;
     }
 
     .banner_image {
