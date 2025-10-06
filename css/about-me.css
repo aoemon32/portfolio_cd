@@ -367,7 +367,6 @@ padding: 80px 60px;
         writing-mode: vertical-lr;
         font-size: 22px;
     }
-} 
 
 
     .profile_photo {
@@ -436,6 +435,7 @@ padding: 80px 60px;
         width:40%
 
     }
+    } 
 
 @media screen and ( max-width:480px ) {
     
